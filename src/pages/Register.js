@@ -17,9 +17,10 @@ const Register = () => {
         username,
         password,
       });
+      alert("Registration successful! Please login.");
       navigate("/login"); // Điều hướng về trang login sau khi đăng ký thành công
     } catch (err) {
-      setError("Registration failed");
+      setError("Registration failed. Please try again.");
     }
   };
 

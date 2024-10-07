@@ -5,23 +5,21 @@ const Account = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchUserData = async () => {
       const token = localStorage.getItem("token");
       if (!token) return;
 
       try {
         const res = await axios.get("http://localhost:5000/api/auth/account", {
-          headers: {
-            Authorization: `Bearer ${token}`, // Gửi token trong header để xác thực
-          },
+          headers: { Authorization: `Bearer ${token}` },
         });
-        setUser(res.data);
+        setUser(res.data); // Hiển thị thông tin người dùng
       } catch (err) {
-        console.error(err);
+        console.error("Error fetching user data:", err);
       }
     };
 
-    fetchData();
+    fetchUserData();
   }, []);
 
   if (!user) {
