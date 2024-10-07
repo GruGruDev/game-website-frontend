@@ -1,0 +1,21 @@
+.card {
+  border-radius: 15px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.text-center p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.text-center a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.text-center a:hover {
+  text-decoration: underline;
+}
