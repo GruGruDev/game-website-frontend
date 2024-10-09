@@ -23,6 +23,16 @@ const Login = () => {
     }
   };
 
+  // Đăng nhập bằng Google
+  const googleLogin = () => {
+    window.open("http://localhost:5000/auth/google", "_self"); // Mở trang đăng nhập Google
+  };
+
+  // Đăng nhập bằng Facebook
+  const facebookLogin = () => {
+    window.open("http://localhost:5000/auth/facebook", "_self"); // Mở trang đăng nhập Facebook
+  };
+
   return (
     <div className="container mt-5">
       <div className="row justify-content-center">
@@ -30,6 +40,8 @@ const Login = () => {
           <div className="card shadow-lg">
             <div className="card-body">
               <h2 className="text-center mb-4">Login</h2>
+
+              {/* Form đăng nhập bằng email và password */}
               <form onSubmit={handleLogin}>
                 <div className="form-group">
                   <label>Email address</label>
@@ -60,12 +72,28 @@ const Login = () => {
                 </button>
               </form>
 
+              {/* Thêm các nút đăng nhập bằng Google và Facebook */}
+              <div className="social-login text-center mt-4">
+                <p>Or login with</p>
+                <button
+                  onClick={googleLogin}
+                  className="btn btn-danger btn-block mb-2"
+                >
+                  Continue with Google
+                </button>
+                <button
+                  onClick={facebookLogin}
+                  className="btn btn-primary btn-block"
+                >
+                  Continue with Facebook
+                </button>
+              </div>
+
               <div className="text-center mt-4">
                 <p>
                   Don't have an account?{" "}
                   <Link to="/register">Register here</Link>
-                </p>{" "}
-                {/* Thêm liên kết đến trang Register */}
+                </p>
               </div>
             </div>
           </div>

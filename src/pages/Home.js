@@ -71,7 +71,7 @@ const Home = () => {
             <div className="col-md-4">
               <div className="card h-100">
                 <img
-                  src="https://via.placeholder.com/300x200"
+                  src="https://images.ctfassets.net/j95d1p8hsuun/2jfzG21kQR797l5HTqy2ur/fbae937be8b61af35341ec7a3792cd08/NW_ROTAE_KEY_WEB_740x416.jpg"
                   className="card-img-top"
                   alt="Event 1"
                 />
@@ -87,7 +87,7 @@ const Home = () => {
             <div className="col-md-4">
               <div className="card h-100">
                 <img
-                  src="https://via.placeholder.com/300x200"
+                  src="https://preview.redd.it/when-are-we-gonna-see-a-double-xp-weekend-v0-lkvqr3y8723a1.jpg?auto=webp&s=3b975b6ed4d6cc8076be426a04544110b38f3df1"
                   className="card-img-top"
                   alt="Event 2"
                 />
@@ -103,7 +103,7 @@ const Home = () => {
             <div className="col-md-4">
               <div className="card h-100">
                 <img
-                  src="https://via.placeholder.com/300x200"
+                  src="https://cdn.wedevs.com/uploads/2021/04/holiday-limited-time-offer.png"
                   className="card-img-top"
                   alt="Event 3"
                 />

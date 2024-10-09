@@ -25,9 +25,20 @@ const Register = () => {
     }
   };
 
+  // Đăng ký qua Google
+  const googleRegister = () => {
+    window.open("http://localhost:5000/auth/google", "_self"); // Mở trang đăng ký qua Google
+  };
+
+  // Đăng ký qua Facebook
+  const facebookRegister = () => {
+    window.open("http://localhost:5000/auth/facebook", "_self"); // Mở trang đăng ký qua Facebook
+  };
+
   return (
     <div className="container mt-5">
       <h2 className="mb-4">Register</h2>
+      {/* Form đăng ký bằng email và mật khẩu */}
       <form onSubmit={handleRegister}>
         <div className="form-group">
           <label>Email address</label>
@@ -64,6 +75,23 @@ const Register = () => {
         </button>
         {error && <p className="text-danger mt-3">{error}</p>}
       </form>
+
+      {/* Thêm các nút đăng ký qua Google và Facebook */}
+      <div className="social-register text-center mt-4">
+        <p>Or register with</p>
+        <button
+          onClick={googleRegister}
+          className="btn btn-danger btn-block mb-2"
+        >
+          Continue with Google
+        </button>
+        <button
+          onClick={facebookRegister}
+          className="btn btn-primary btn-block"
+        >
+          Continue with Facebook
+        </button>
+      </div>
     </div>
   );
 };
