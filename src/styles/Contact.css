@@ -1,0 +1,23 @@
+h1 {
+  color: #9290c3;
+}
+
+.form-control {
+  background-color: #1b1a55;
+  color: #ffffff;
+  border: 1px solid #535c91;
+}
+
+.form-control:focus {
+  border-color: #9290c3;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background-color: #535c91;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #9290c3;
+}

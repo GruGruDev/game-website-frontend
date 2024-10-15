@@ -1,19 +1,154 @@
-.home-page .carousel-caption p {
-  font-size: 1.2rem;
-  font-style: italic;
+/* Tùy chỉnh toàn trang */
+body,
+html {
+  font-family: "Roboto", sans-serif;
+  background-color: #070f2b;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
-.home-page .carousel-control-prev-icon,
-.home-page .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
+.home-page {
+  background-color: #070f2b;
+}
+
+/* Logo */
+.logo {
+  width: 100px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1b1a55;
+}
+
+.nav-link {
+  color: #9290c3 !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Header */
+header {
+  background-color: #070f2b;
+  padding: 60px 0;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #9290c3;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+header .btn {
+  border-radius: 25px;
+}
+
+header .btn-light {
+  background-color: #535c91;
+  color: #ffffff;
+}
+
+header .btn-outline-light {
+  border-color: #9290c3;
+  color: #9290c3;
+}
+
+header .btn-outline-light:hover {
+  background-color: #9290c3;
+  color: #ffffff;
+}
+
+/* Section Features */
+h2 {
+  color: #9290c3;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #1b1a55;
+  color: #ffffff;
+}
+
+.card .card-title {
+  color: #9290c3;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.card .card-text {
+  color: #535c91;
+  font-size: 1rem;
+}
+
+/* Section Latest News */
+section.bg-light {
+  background-color: #070f2b;
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card h5 {
+  color: #9290c3;
+}
+
+.card p {
+  color: #ffffff;
+}
+
+.card:hover {
+  background-color: #535c91;
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Footer */
+footer {
+  background-color: #1b1a55;
+  color: #9290c3;
+}
+
+footer a {
+  color: #9290c3;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Carousel */
+.carousel-caption {
+  color: #ffffff;
+}
+
+.carousel-indicators li {
+  background-color: #9290c3;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #9290c3;
   border-radius: 50%;
 }
 
-.home-page .card img {
-  height: 200px;
-  object-fit: cover;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
 
-.home-page footer a {
-  text-decoration: underline;
+  .logo {
+    width: 80px;
+  }
 }

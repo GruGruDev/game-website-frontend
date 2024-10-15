@@ -1,34 +1,87 @@
+// import "animate.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/Home.css"; // Nếu bạn cần tùy chỉnh CSS riêng
+import "../styles/Home.css";
 
 const Home = () => {
   return (
     <div className="home-page">
-      {/* Header Section */}
-      <header className="bg-primary text-white text-center py-5 mb-4">
+      {/* Navigation Bar */}
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <h1 className="display-4">Welcome to Awesome Game</h1>
-          <p className="lead">
+          <Link to="/" className="navbar-brand">
+            <img src="/logo.png" alt="Logo" className="logo" />
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <Link to="/" className="nav-link">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/about" className="nav-link">
+                  About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/services" className="nav-link">
+                  Services
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/contact" className="nav-link">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      {/* Header Section */}
+      <header className="bg-primary text-white text-center py-5 mb-4 animate__animated animate__fadeIn">
+        <div className="container">
+          <h1 className="display-4 animate__animated animate__fadeInDown">
+            Welcome to Awesome Game
+          </h1>
+          <p className="lead animate__animated animate__fadeInUp">
             Join the ultimate adventure in a world full of excitement!
           </p>
-          <Link to="/register" className="btn btn-light btn-lg mx-2">
+          <Link
+            to="/register"
+            className="btn btn-light btn-lg mx-2 animate__animated animate__zoomIn"
+          >
             Get Started
           </Link>
-          <Link to="/login" className="btn btn-outline-light btn-lg mx-2">
+          <Link
+            to="/login"
+            className="btn btn-outline-light btn-lg mx-2 animate__animated animate__zoomIn"
+          >
             Login
           </Link>
         </div>
       </header>
 
       {/* Features Section */}
-      <section className="container my-5">
+      <section className="container my-5 animate__animated animate__fadeInUp">
         <h2 className="text-center mb-4">Why Choose Awesome Game?</h2>
         <div className="row text-center">
           <div className="col-md-4">
             <div className="card border-0">
               <div className="card-body">
-                <i className="fas fa-gamepad fa-3x text-primary mb-3"></i>
+                <i className="fas fa-gamepad fa-3x text-primary mb-3 animate__animated animate__bounceIn"></i>
                 <h5 className="card-title">Exciting Gameplay</h5>
                 <p className="card-text">
                   Experience immersive and interactive gameplay like never
@@ -40,7 +93,7 @@ const Home = () => {
           <div className="col-md-4">
             <div className="card border-0">
               <div className="card-body">
-                <i className="fas fa-users fa-3x text-primary mb-3"></i>
+                <i className="fas fa-users fa-3x text-primary mb-3 animate__animated animate__bounceIn"></i>
                 <h5 className="card-title">Multiplayer Mode</h5>
                 <p className="card-text">
                   Play with friends or compete with players worldwide in
@@ -52,7 +105,7 @@ const Home = () => {
           <div className="col-md-4">
             <div className="card border-0">
               <div className="card-body">
-                <i className="fas fa-trophy fa-3x text-primary mb-3"></i>
+                <i className="fas fa-trophy fa-3x text-primary mb-3 animate__animated animate__bounceIn"></i>
                 <h5 className="card-title">Earn Rewards</h5>
                 <p className="card-text">
                   Complete quests and unlock exclusive rewards and achievements!
@@ -63,65 +116,61 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Latest News Section */}
+      {/* Our Story Section */}
       <section className="bg-light py-5">
         <div className="container">
-          <h2 className="text-center mb-4">Latest News & Events</h2>
-          <div className="row">
-            <div className="col-md-4">
-              <div className="card h-100">
-                <img
-                  src="https://images.ctfassets.net/j95d1p8hsuun/2jfzG21kQR797l5HTqy2ur/fbae937be8b61af35341ec7a3792cd08/NW_ROTAE_KEY_WEB_740x416.jpg"
-                  className="card-img-top"
-                  alt="Event 1"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">New Expansion Released!</h5>
-                  <p className="card-text">
-                    Explore the new lands and unlock exciting new content in our
-                    latest expansion!
-                  </p>
-                </div>
-              </div>
+          <h2 className="text-center mb-4">Our Story</h2>
+          <p className="text-center">
+            Awesome Game was founded by a passionate team of gamers and
+            developers who aimed to create the most immersive and exciting
+            gaming experience. From humble beginnings to global success, our
+            journey is a testament to the power of creativity and dedication.
+          </p>
+        </div>
+      </section>
+
+      {/* Our Team Section */}
+      <section className="container my-5">
+        <h2 className="text-center mb-4">Meet Our Team</h2>
+        <div className="row text-center">
+          <div className="col-md-4">
+            <div className="card border-0">
+              <img
+                src="team1.jpg"
+                alt="Team Member"
+                className="img-fluid rounded-circle mb-3"
+              />
+              <h5 className="card-title">GruGru</h5>
+              <p className="card-text">Founder & CEO</p>
             </div>
-            <div className="col-md-4">
-              <div className="card h-100">
-                <img
-                  src="https://preview.redd.it/when-are-we-gonna-see-a-double-xp-weekend-v0-lkvqr3y8723a1.jpg?auto=webp&s=3b975b6ed4d6cc8076be426a04544110b38f3df1"
-                  className="card-img-top"
-                  alt="Event 2"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Weekend Double XP Event</h5>
-                  <p className="card-text">
-                    Join us for a weekend full of double XP, and level up faster
-                    than ever before!
-                  </p>
-                </div>
-              </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card border-0">
+              <img
+                src="team2.jpg"
+                alt="Team Member"
+                className="img-fluid rounded-circle mb-3"
+              />
+              <h5 className="card-title">GruGru</h5>
+              <p className="card-text">Lead Developer</p>
             </div>
-            <div className="col-md-4">
-              <div className="card h-100">
-                <img
-                  src="https://cdn.wedevs.com/uploads/2021/04/holiday-limited-time-offer.png"
-                  className="card-img-top"
-                  alt="Event 3"
-                />
-                <div className="card-body">
-                  <h5 className="card-title">Special Holiday Sale</h5>
-                  <p className="card-text">
-                    Don’t miss out on our holiday sale, offering discounts on
-                    exclusive items and upgrades!
-                  </p>
-                </div>
-              </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card border-0">
+              <img
+                src="team3.jpg"
+                alt="Team Member"
+                className="img-fluid rounded-circle mb-3"
+              />
+              <h5 className="card-title">GruGru</h5>
+              <p className="card-text">Game Designer</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-5">
+      <section className="bg-light py-5">
         <div className="container">
           <h2 className="text-center mb-4">What Players Are Saying</h2>
           <div
