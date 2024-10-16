@@ -1,16 +1,17 @@
-// import "animate.css";
+import "animate.css"; // Import Animate.css cho hiệu ứng động
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/Home.css";
+import "../styles/Home.css"; // File CSS tùy chỉnh
 
 const Home = () => {
   return (
     <div className="home-page">
-      {/* Navigation Bar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
-          <Link to="/" className="navbar-brand">
-            <img src="/logo.png" alt="Logo" className="logo" />
+          <Link to="/" className="navbar-brand logo-text">
+            <img src="/logo.png" className="logo" alt="Logo" />
+            Hyper Game
           </Link>
           <button
             className="navbar-toggler"
@@ -23,6 +24,7 @@ const Home = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
@@ -50,206 +52,135 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* Header Section */}
-      <header className="bg-primary text-white text-center py-5 mb-4 animate__animated animate__fadeIn">
+      {/* Hero Section */}
+      <section className="hero-section text-white text-center">
         <div className="container">
-          <h1 className="display-4 animate__animated animate__fadeInDown">
-            Welcome to Awesome Game
+          <h1 className="animate__animated animate__fadeInDown">
+            The Ultimate Adventure Awaits!
           </h1>
           <p className="lead animate__animated animate__fadeInUp">
-            Join the ultimate adventure in a world full of excitement!
+            Step into the world of excitement and unlock endless possibilities.
           </p>
           <Link
             to="/register"
-            className="btn btn-light btn-lg mx-2 animate__animated animate__zoomIn"
+            className="btn btn-glow animate__animated animate__pulse"
           >
             Get Started
           </Link>
           <Link
             to="/login"
-            className="btn btn-outline-light btn-lg mx-2 animate__animated animate__zoomIn"
+            className="btn btn-outline-light animate__animated animate__fadeIn"
           >
             Login
           </Link>
         </div>
-      </header>
+      </section>
 
       {/* Features Section */}
-      <section className="container my-5 animate__animated animate__fadeInUp">
-        <h2 className="text-center mb-4">Why Choose Awesome Game?</h2>
-        <div className="row text-center">
+      <section className="features-section container text-center my-5">
+        <h2 className="text-uppercase section-title animate__animated animate__bounceIn">
+          Why You'll Love SuperGame
+        </h2>
+        <div className="row">
           <div className="col-md-4">
-            <div className="card border-0">
-              <div className="card-body">
-                <i className="fas fa-gamepad fa-3x text-primary mb-3 animate__animated animate__bounceIn"></i>
-                <h5 className="card-title">Exciting Gameplay</h5>
-                <p className="card-text">
-                  Experience immersive and interactive gameplay like never
-                  before!
-                </p>
-              </div>
+            <div className="feature-card animate__animated animate__fadeInUp">
+              <i className="fas fa-gamepad fa-4x feature-icon"></i>
+              <h5>Epic Gameplay</h5>
+              <p>Experience immersive adventures with stunning graphics.</p>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="card border-0">
-              <div className="card-body">
-                <i className="fas fa-users fa-3x text-primary mb-3 animate__animated animate__bounceIn"></i>
-                <h5 className="card-title">Multiplayer Mode</h5>
-                <p className="card-text">
-                  Play with friends or compete with players worldwide in
-                  multiplayer battles.
-                </p>
-              </div>
+            <div className="feature-card animate__animated animate__fadeInUp">
+              <i className="fas fa-users fa-4x feature-icon"></i>
+              <h5>Multiplayer Mode</h5>
+              <p>Team up with friends or challenge players around the world.</p>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="card border-0">
-              <div className="card-body">
-                <i className="fas fa-trophy fa-3x text-primary mb-3 animate__animated animate__bounceIn"></i>
-                <h5 className="card-title">Earn Rewards</h5>
-                <p className="card-text">
-                  Complete quests and unlock exclusive rewards and achievements!
-                </p>
-              </div>
+            <div className="feature-card animate__animated animate__fadeInUp">
+              <i className="fas fa-trophy fa-4x feature-icon"></i>
+              <h5>Exclusive Rewards</h5>
+              <p>Unlock badges, trophies, and rare items as you conquer.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Story Section */}
-      <section className="bg-light py-5">
+      {/* Call to Action */}
+      <section className="cta-section text-center text-white">
         <div className="container">
-          <h2 className="text-center mb-4">Our Story</h2>
-          <p className="text-center">
-            Awesome Game was founded by a passionate team of gamers and
-            developers who aimed to create the most immersive and exciting
-            gaming experience. From humble beginnings to global success, our
-            journey is a testament to the power of creativity and dedication.
+          <h2 className="animate__animated animate__fadeInLeft">
+            Join Millions of Players Worldwide
+          </h2>
+          <p className="animate__animated animate__fadeInRight">
+            Get ready to embark on your journey today.
           </p>
+          <Link to="/register" className="btn btn-glow">
+            Join Now
+          </Link>
         </div>
       </section>
 
-      {/* Our Team Section */}
-      <section className="container my-5">
-        <h2 className="text-center mb-4">Meet Our Team</h2>
-        <div className="row text-center">
+      {/* Latest News Section */}
+      <section className="news-section container my-5">
+        <h2 className="text-uppercase text-center section-title">
+          Latest Updates
+        </h2>
+        <div className="row">
           <div className="col-md-4">
-            <div className="card border-0">
+            <div className="news-card">
               <img
-                src="team1.jpg"
-                alt="Team Member"
-                className="img-fluid rounded-circle mb-3"
+                src="https://images.ctfassets.net/j95d1p8hsuun/2jfzG21kQR797l5HTqy2ur/fbae937be8b61af35341ec7a3792cd08/NW_ROTAE_KEY_WEB_740x416.jpg"
+                alt="News 1"
+                className="news-img"
               />
-              <h5 className="card-title">GruGru</h5>
-              <p className="card-text">Founder & CEO</p>
+              <h5>New Expansion Released</h5>
+              <p>Explore the unknown and conquer new lands.</p>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="card border-0">
+            <div className="news-card">
               <img
-                src="team2.jpg"
-                alt="Team Member"
-                className="img-fluid rounded-circle mb-3"
+                src="https://preview.redd.it/when-are-we-gonna-see-a-double-xp-weekend-v0-lkvqr3y8723a1.jpg?auto=webp&s=3b975b6ed4d6cc8076be426a04544110b38f3df1"
+                alt="News 2"
+                className="news-img"
               />
-              <h5 className="card-title">GruGru</h5>
-              <p className="card-text">Lead Developer</p>
+              <h5>Double XP Weekend</h5>
+              <p>Earn double experience points this weekend!</p>
             </div>
           </div>
           <div className="col-md-4">
-            <div className="card border-0">
+            <div className="news-card">
               <img
-                src="team3.jpg"
-                alt="Team Member"
-                className="img-fluid rounded-circle mb-3"
+                src="https://cdn.wedevs.com/uploads/2021/04/holiday-limited-time-offer.png"
+                alt="News 3"
+                className="news-img"
               />
-              <h5 className="card-title">GruGru</h5>
-              <p className="card-text">Game Designer</p>
+              <h5>Holiday Event</h5>
+              <p>Enjoy exclusive discounts and limited-time rewards.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="bg-light py-5">
-        <div className="container">
-          <h2 className="text-center mb-4">What Players Are Saying</h2>
-          <div
-            id="testimonialCarousel"
-            className="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <div className="carousel-caption">
-                  <p>
-                    "This game has changed the way I see online gaming. It's
-                    thrilling!"
-                  </p>
-                  <small>- Player One</small>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <div className="carousel-caption">
-                  <p>
-                    "The best multiplayer experience I’ve had! Highly recommend
-                    to all!"
-                  </p>
-                  <small>- Player Two</small>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <div className="carousel-caption">
-                  <p>
-                    "I love the challenges and the constant updates. Always
-                    something new!"
-                  </p>
-                  <small>- Player Three</small>
-                </div>
-              </div>
-            </div>
-            <a
-              className="carousel-control-prev"
-              href="#testimonialCarousel"
-              role="button"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </a>
-            <a
-              className="carousel-control-next"
-              href="#testimonialCarousel"
-              role="button"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark text-white py-4">
-        <div className="container text-center">
-          <p>&copy; 2024 Awesome Game. All rights reserved.</p>
+      <footer className="footer text-center text-white">
+        <div className="container">
+          <p>&copy; 2024 SuperGame. All rights reserved.</p>
           <p>
-            Follow us on{" "}
+            Follow us on
             <a href="#" className="text-light">
+              {" "}
               Facebook
             </a>
-            ,{" "}
+            ,
             <a href="#" className="text-light">
+              {" "}
               Twitter
             </a>
-            , and{" "}
+            , and
             <a href="#" className="text-light">
+              {" "}
               Instagram
             </a>
             .
