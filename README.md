@@ -1,70 +1,210 @@
-# Getting Started with Create React App
+# Hyper Game - React Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **Hyper Game**, a modern gaming platform where players can experience thrilling adventures, multiplayer modes, and exclusive rewards. This web application provides a clean, immersive interface for users to manage their accounts, participate in events, and stay up-to-date with the latest gaming news.
 
-## Available Scripts
+## Features
+- **User Authentication**: Register, login, and manage your account.
+- **Responsive Design**: Optimized for desktop and mobile devices.
+- **Account Management**: Users can upload, update, or delete their profile avatars without page refresh.
+- **Remember Me Functionality**: Allows users to stay logged in between sessions.
+- **Forgot Password**: Users can reset their password through email.
+- **Multilingual Support**: Switch between English and Vietnamese.
+- **Latest Gaming News & Events**: Stay up to date with the latest game updates and events.
+- **Hero Sections & Animations**: Beautifully animated sections powered by Animate.css.
 
-In the project directory, you can run:
+## Tech Stack
+- **Frontend**: React, Bootstrap, Animate.css
+- **Backend**: Node.js, Express
+- **Database**: MySQL with Sequelize ORM
+- **Email Service**: SendGrid for password reset emails
+- **Authentication**: JWT (JSON Web Token)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/hyper-game.git
+cd hyper-game
+2. Install dependencies
+Backend:
+bash
+Sao chép mã
+cd game-website-backend
+npm install
+Frontend:
+bash
+Sao chép mã
+cd ../game-website-frontend
+npm install
+3. Environment Setup
+Create a .env file in the backend directory and configure the following:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+plaintext
+Sao chép mã
+PORT=5000
+JWT_SECRET=your_jwt_secret
+SENDGRID_API_KEY=your_sendgrid_api_key
+EMAIL_USER=your_email_address
+EMAIL_PASSWORD=your_email_password
+4. Start the Application
+Backend:
+bash
+Sao chép mã
+cd game-website-backend
+npm start
+Frontend:
+bash
+Sao chép mã
+cd ../game-website-frontend
+npm start
+Folder Structure
+bash
+Sao chép mã
+├── game-website-frontend
+│   ├── public
+│   │   └── index.html    # Main HTML file for the frontend
+│   ├── src
+│   │   ├── pages         # All React page components (Home, Login, Account, etc.)
+│   │   ├── components    # Reusable components (Navbar, Footer, etc.)
+│   │   ├── styles        # CSS files for custom styles
+│   │   ├── App.js        # Main React application file
+│   │   └── index.js      # Entry point for the React app
+└── game-website-backend
+    ├── config
+    │   └── database.js   # Sequelize database configuration
+    ├── controllers       # All controller logic for authentication, profile management, etc.
+    ├── models            # Sequelize models (User)
+    ├── routes            # Express routes for API endpoints
+    └── server.js         # Main entry point for the backend
+Usage
+Register a New Account
+Click on the Get Started button on the homepage and fill out the registration form.
+Login
+Navigate to the login page, enter your credentials, and check Remember Me if you want to stay logged in.
+Account Management
+Once logged in, click on the user icon in the top-right corner to manage your account, upload/delete avatars, and change your password.
+Reset Password
+If you forgot your password, click on Forgot Password and follow the instructions to reset your password via email.
+Multilingual Support
+Switch between English and Vietnamese by selecting your preferred language from the user dropdown menu.
+Contributing
+We welcome contributions to enhance Hyper Game! Please follow the guidelines outlined in the CONTRIBUTING.md file.
 
-### `npm test`
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+markdown
+Sao chép mã
 
-### `npm run build`
+### **Key Sections in README:**
+1. **Features**: Highlights the main functionalities of the app.
+2. **Tech Stack**: Lists the technologies used in the project.
+3. **Installation**: Instructions for setting up the project locally.
+4. **Folder Structure**: Shows how the project is organized.
+5. **Usage**: Explains how to use key features like registration, login, account management, and multilingual support.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Feel free to adjust or expand the details as needed for your specific project.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Bạn đã nói:
+tao file readme.md
+ChatGPT đã nói:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Here is the complete content for your README.md file. You can create this file at the root of your project directory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+readme.md
+markdown
+Sao chép mã
+# Hyper Game - React Web Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Welcome to **Hyper Game**, a modern gaming platform where players can experience thrilling adventures, multiplayer modes, and exclusive rewards. This web application provides a clean, immersive interface for users to manage their accounts, participate in events, and stay up-to-date with the latest gaming news.
 
-## Learn More
+## Features
+- **User Authentication**: Register, login, and manage your account.
+- **Responsive Design**: Optimized for desktop and mobile devices.
+- **Account Management**: Users can upload, update, or delete their profile avatars without page refresh.
+- **Remember Me Functionality**: Allows users to stay logged in between sessions.
+- **Forgot Password**: Users can reset their password through email.
+- **Multilingual Support**: Switch between English and Vietnamese.
+- **Latest Gaming News & Events**: Stay up to date with the latest game updates and events.
+- **Hero Sections & Animations**: Beautifully animated sections powered by Animate.css.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tech Stack
+- **Frontend**: React, Bootstrap, Animate.css
+- **Backend**: Node.js, Express
+- **Database**: MySQL with Sequelize ORM
+- **Email Service**: SendGrid for password reset emails
+- **Authentication**: JWT (JSON Web Token)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Installation
 
-### Code Splitting
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/hyper-game.git
+cd hyper-game
+2. Install dependencies
+Backend:
+bash
+Sao chép mã
+cd game-website-backend
+npm install
+Frontend:
+bash
+Sao chép mã
+cd ../game-website-frontend
+npm install
+3. Environment Setup
+Create a .env file in the backend directory and configure the following:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+plaintext
+Sao chép mã
+PORT=5000
+JWT_SECRET=your_jwt_secret
+SENDGRID_API_KEY=your_sendgrid_api_key
+EMAIL_USER=your_email_address
+EMAIL_PASSWORD=your_email_password
+4. Start the Application
+Backend:
+bash
+Sao chép mã
+cd game-website-backend
+npm start
+Frontend:
+bash
+Sao chép mã
+cd ../game-website-frontend
+npm start
+Folder Structure
+bash
+Sao chép mã
+├── game-website-frontend
+│   ├── public
+│   │   └── index.html    # Main HTML file for the frontend
+│   ├── src
+│   │   ├── pages         # All React page components (Home, Login, Account, etc.)
+│   │   ├── components    # Reusable components (Navbar, Footer, etc.)
+│   │   ├── styles        # CSS files for custom styles
+│   │   ├── App.js        # Main React application file
+│   │   └── index.js      # Entry point for the React app
+└── game-website-backend
+    ├── config
+    │   └── database.js   # Sequelize database configuration
+    ├── controllers       # All controller logic for authentication, profile management, etc.
+    ├── models            # Sequelize models (User)
+    ├── routes            # Express routes for API endpoints
+    └── server.js         # Main entry point for the backend
+Usage
+Register a New Account
+Click on the Get Started button on the homepage and fill out the registration form.
+Login
+Navigate to the login page, enter your credentials, and check Remember Me if you want to stay logged in.
+Account Management
+Once logged in, click on the user icon in the top-right corner to manage your account, upload/delete avatars, and change your password.
+Reset Password
+If you forgot your password, click on Forgot Password and follow the instructions to reset your password via email.
+Multilingual Support
+Switch between English and Vietnamese by selecting your preferred language from the user dropdown menu.
+Contributing
+We welcome contributions to enhance Hyper Game! Please follow the guidelines outlined in the CONTRIBUTING.md file.
